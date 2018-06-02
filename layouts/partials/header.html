@@ -15,16 +15,15 @@
     {{- .Site.Title -}}
   </title>
   <!-- Meta -->
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
   {{- if eq .Kind "page" }}
   <meta name="description" content="{{ .Summary }}">
-  <meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
   {{ else }}
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <meta name="author" content="{{ .Site.Params.author }}">
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ end -}}
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
-  <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
@@ -37,9 +36,9 @@
 <body class="{{if eq .Kind `page` }}single{{else}}list{{end}}">
   <header class="header">
     {{ if .IsHome }}
-    <h1 class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></h1>
+    <h1 class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></h1>
     {{ else }}
-    <p class="title"><a href="{{ `/` }}"><span>🍱</span>{{ .Site.Title }}</a></p>
+    <p class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></p>
     {{ end }}
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
