@@ -48,6 +48,7 @@ figure {
 img {
   max-width: 100%;
   vertical-align: middle;
+  margin: 15px 0;
 }
 button, input, textarea {
   -webkit-appearance: none;
@@ -66,6 +67,11 @@ pre, code {
   font-size: inherit;
   line-height: 21px;
 }
+
+ul.related > li {
+  margin: 5px 0;
+}
+
 /* Header
 ============================================================= */
 .header {
