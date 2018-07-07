@@ -7,6 +7,7 @@
         {{- if or .Params.author .Site.Params.author -}}
         {{ .Params.author | default .Site.Params.author }} · {{ end }}
         {{- .Date.Format "2006-01-02" -}}
+        {{- if .Params.City }} · near <a href="https://www.google.com.br/maps/search/{{ .Params.City }}">{{ .Params.City }}</a>{{ end }}
       </p>
     {{ end }}
   </header>
