@@ -348,6 +348,7 @@ ul.related > li {
 .post-content ol,
 .post-content dl {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .post-content ul,
 .post-content ol {
