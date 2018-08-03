@@ -6,12 +6,14 @@
       <p class="post-meta">
         {{- if or .Params.author .Site.Params.author -}}
         {{ .Params.author | default .Site.Params.author }} · {{ end }}
+        {{- if .Params.City }}<a href="https://www.google.com.br/maps/search/{{ .Params.City }}">{{ .Params.City }}</a>  · {{ end }}
         {{- .Date.Format "2006-01-02" -}}
-        {{- if .Params.City }} · near <a href="https://www.google.com.br/maps/search/{{ .Params.City }}">{{ .Params.City }}</a>{{ end }}
       </p>
     {{ end }}
   </header>
-  <div class="post-content">{{ .Content }}</div>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
   <footer class="post-footer">
     {{ if .Params.tags }}
     <ul class="post-tags">

@@ -67,6 +67,9 @@ pre, code {
   font-size: inherit;
   line-height: 21px;
 }
+div.highlight > pre {
+  overflow-x: auto;
+}
 
 ul.related > li {
   margin: 5px 0;
