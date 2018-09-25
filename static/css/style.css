@@ -80,7 +80,6 @@ ul.related > li {
 .header {
   display: flex;
   justify-content: space-between;
-  height: 65px;
   padding-left: 30px;
   padding-right: 30px;
   line-height: 65px;
@@ -257,7 +256,7 @@ ul.related > li {
   position: relative;
   margin-bottom: 40px;
   padding-top: 60px;
-  padding-bottom: 120px;
+  padding-bottom: 40px;
   background: #fff;
 }
 .welcome-emoji {
