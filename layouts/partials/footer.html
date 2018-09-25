@@ -4,6 +4,13 @@
   <span>&middot;</span>
   <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
 </footer>
+<script>
+  var $toggle = document.querySelector('.menu-toggle');
+  var $body = document.querySelector('body');
+  $toggle.addEventListener('click', function() {
+    $body.classList.toggle('noscroll');
+  }, false);
+</script>
 {{ template "_internal/google_analytics.html" . }}
 </body>
 </html>
