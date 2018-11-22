@@ -36,9 +36,9 @@
 <body class="{{if eq .Kind `page` }}single{{else}}list{{end}}">
   <header class="header">
     {{ if .IsHome }}
-    <h1 class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></h1>
+    <h1 class="title"><a href="{{ `/` | relLangURL }}">{{ .Site.Title }}</a></h1>
     {{ else }}
-    <p class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></p>
+    <p class="title"><a href="{{ `/` | relLangURL }}">{{ .Site.Title }}</a></p>
     {{ end }}
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -46,7 +46,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
+          <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>
