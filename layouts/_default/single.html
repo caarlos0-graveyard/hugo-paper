@@ -4,8 +4,8 @@
     <h1 class="post-title">{{ .Title }}</h1>
     {{ if eq .Type "post" }}
       <p class="post-meta">
-        {{- if or .Params.author .Site.Params.author -}}
-        {{ .Params.author | default .Site.Params.author }} · {{ end }}
+        <!-- {{- if or .Params.author .Site.Params.author -}}
+        {{ .Params.author | default .Site.Params.author }} · {{ end }} -->
         {{- if .Params.City }}<a href="https://www.google.com.br/maps/search/{{ .Params.City }}">{{ .Params.City }}</a>  · {{ end }}
         {{- .Date.Format "2006-01-02" -}}
       </p>
