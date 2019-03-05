@@ -13,12 +13,14 @@
   box-sizing: border-box;
 }
 @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
 html {
+  font-family: 'Inter', sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
 }
 article, aside, figcaption, figure, footer, header, main, nav, section {
   display: block;
@@ -68,6 +70,7 @@ button, input[type=button], input[type=submit] {
   cursor: pointer;
 }
 pre, code {
+  font-family: Menlo, Consolas, monospace;
   font-size: inherit;
   line-height: 21px;
 }
